@@ -52,6 +52,7 @@ Clicking on one of these elements will filter out any rows in your table that do
 
 You may also provide a filter-reset element by adding any clickable element with a `data-filter` attribute with a blank value.  
 Clicking on this element will remove any previously applied filters and reset the table to its original/unfiltered state.
+Initialize the filter reset elements as disabled.
 
 ### Examples
 
@@ -79,7 +80,7 @@ Then, provide filter elements to that shortcode for the keywords listed above, a
   <button data-filter="foo">Foo</button>
   <button data-filter="bar">Bar</button>
   <button data-filter="baz">Baz</button>
-  <button data-filter="">Reset</button>
+  <button data-filter="" disabled="disabled">Reset</button>
 [/tablepress-ext-column-filters]
 
 [table id=1 /]

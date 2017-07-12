@@ -71,6 +71,22 @@
                     }
                     $(this).toggleClass('active');
                 }
+
+                // Finally, check if any filters are active.
+                // If so, then enable any filter reset elements, otherwise disable them.
+                if (filters.length) {
+                    $("[data-filter='']", $this).each(function (index, element) {
+                        $(element).removeAttr('disabled');
+                    });
+                } else {
+                    $("[data-filter='']", $this).each(function (index, element) {
+                        var $elem = $(element);
+                        if (! $elem.attr('disabled')) {
+                            $elem.attr('disabled', 'disabled');
+                        }
+                    });
+                }
+
                 dt.draw(); // always re-draw the data table to trigger filtering.
             });
         });
