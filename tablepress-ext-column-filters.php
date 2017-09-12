@@ -9,7 +9,7 @@
  * Plugin Name:       TablePress Extension: Column filters
  * Plugin URI:        https://github.com/ucsf-ckm/tablepress-ext-column-filters
  * Description:       Filters a given data table by searching comma-separated lists of terms in a given column.
- * Version:           0.9.2
+ * Version:           1.0.0
  * Author:            Stefan Topfstedt
  * Author URI:        https://github.com/stopfstedt
  * License:           MIT
@@ -28,7 +28,7 @@ if ( ! defined( 'ABSPATH' ) ) {
  *
  * @var string TABLEPRESS_EXT_COLUMN_FILTERS_VERSION
  */
-const TABLEPRESS_EXT_COLUMN_FILTERS_VERSION = '0.9.2';
+const TABLEPRESS_EXT_COLUMN_FILTERS_VERSION = '1.0.0';
 
 add_action( 'wp_enqueue_scripts', 'tablepress_ext_column_filters_datatables_enqueue_scripts' );
 add_filter( 'tablepress_table_js_options', 'tablepress_ext_column_filters_datatables_js_options', 10, 3 );
